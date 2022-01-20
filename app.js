@@ -38,7 +38,7 @@ function renderPerson(index) {
     }
 }
 
-renderPerson(1);
+renderPerson(0);
 
     // get user input
     // use user input to update state 

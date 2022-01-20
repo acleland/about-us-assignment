@@ -12,7 +12,14 @@ console.log(selectEl, nameEl, ageEl, bioEl, hobbiesEl, containEl);
 // const 
 // set event listeners 
 selectEl.addEventListener('change', (e) => {
-    console.log('user click');
+    const selected = e.target.value;
+    hobbiesEl.innerHTML = ' ';
+    if (selected === 'one') {
+        renderPerson(0);
+    } else {
+        renderPerson(1);
+    }
+    // console.log(selected);
 
 });
 
@@ -30,6 +37,9 @@ function renderPerson(index) {
         hobbiesEl.appendChild(li);
     }
 }
+
+renderPerson(1);
+
     // get user input
     // use user input to update state 
     // update DOM to reflect the new state
